@@ -1,0 +1,106 @@
+/*
+ * Copyright (c) 2016 rsmenon
+ * Licensed under the MIT License (https://opensource.org/licenses/MIT)
+ */
+.highlight-wl .highlight .c,
+.language-mathematica .c,
+.language-mma .c,
+.language-nb .c,
+.language-wl .c,
+.language-wolfram .c,
+.language-wolfram-language .c {
+  color: rgb(153, 153, 153);
+  font-style: italic;
+}
+.highlight-wl .highlight .nb,
+.language-mathematica .nb,
+.language-mma .nb,
+.language-nb .nb,
+.language-wl .nb,
+.language-wolfram .nb,
+.language-wolfram-language .nb {
+  color: #000;
+}
+.highlight-wl .highlight .nf,
+.language-mathematica .nf,
+.language-mma .nf,
+.language-nb .nf,
+.language-wl .nf,
+.language-wolfram .nf,
+.language-wolfram-language .nf {
+  color: rgb(67, 137, 88);
+  font-style: italic;
+}
+.highlight-wl .highlight .nt,
+.language-mathematica .nt,
+.language-mma .nt,
+.language-nb .nt,
+.language-wl .nt,
+.language-wolfram .nt,
+.language-wolfram-language .nt {
+  color: rgb(67, 137, 88);
+  font-style: italic;
+}
+.highlight-wl .highlight .nv,
+.language-mathematica .nv,
+.language-mma .nv,
+.language-nb .nv,
+.language-wl .nv,
+.language-wolfram .nv,
+.language-wolfram-language .nv {
+  color: rgb(0, 44, 195);
+}
+.highlight-wl .highlight .o,
+.language-mathematica .o,
+.language-mma .o,
+.language-nb .o,
+.language-wl .o,
+.language-wolfram .o,
+.language-wolfram-language .o {
+  color: #000;
+}
+.highlight-wl .highlight .p,
+.language-mathematica .p,
+.language-mma .p,
+.language-nb .p,
+.language-wl .p,
+.language-wolfram .p,
+.language-wolfram-language .p {
+  color: #000;
+}
+.highlight-wl .highlight .s,
+.language-mathematica .s,
+.language-mma .s,
+.language-nb .s,
+.language-wl .s,
+.language-wolfram .s,
+.language-wolfram-language .s {
+  color: rgb(102, 102, 102);
+}
+.highlight-wl .highlight .vc,
+.language-mathematica .vc,
+.language-mma .vc,
+.language-nb .vc,
+.language-wl .vc,
+.language-wolfram .vc,
+.language-wolfram-language .vc {
+  color: rgb(67, 137, 88);
+}
+.highlight-wl .highlight .err,
+.language-mathematica .err,
+.language-mma .err,
+.language-nb .err,
+.language-wl .err,
+.language-wolfram .err,
+.language-wolfram-language .err {
+  color: rgb(102, 102, 102);
+}
+.highlight-wl .highlight *,
+.language-mathematica *,
+.language-mma *,
+.language-nb *,
+.language-wl *,
+.language-wolfram *,
+.language-wolfram-language * {
+  color: #000;
+}
