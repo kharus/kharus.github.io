@@ -182,6 +182,7 @@ html_sidebars = {
 # default is ``False``.
 # disqus_drafts = False
 
+blog_post_pattern = ["posts/*.rst", "posts/*.md"]
 # -- Sphinx Options -----------------------------------------------------------
 
 # If your project needs a minimal Sphinx version, state it here.
