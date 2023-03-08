@@ -25,6 +25,8 @@ blog_title = "Ruslan's log Blog"
 # e.g. blog_baseurl = "http://example.com/"
 blog_baseurl = ""
 
+post_date_format = "%d-%m-%Y"
+
 # Choose to archive only post titles. Archiving only titles can speed
 # up project building.
 # blog_archive_titles = False
@@ -183,6 +185,7 @@ html_sidebars = {
 # disqus_drafts = False
 
 blog_post_pattern = ["posts/*.rst", "posts/*.md"]
+
 # -- Sphinx Options -----------------------------------------------------------
 
 # If your project needs a minimal Sphinx version, state it here.
@@ -196,10 +199,22 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'ablog',
+    'myst_parser'
 ]
 
-# The suffix(es) of source filenames.
-source_suffix = ".rst"
+myst_enable_extensions = [
+    "dollarmath",
+    "html_admonition",
+    "html_image",
+    "colon_fence",
+]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+
+mathjax3_config = {'chtml': {'displayAlign': 'left'}}
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
@@ -236,7 +251,7 @@ language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = [""]
+exclude_patterns = [".venv"]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.

@@ -1,4 +1,5 @@
-ablog>=0.11.0rc2
+ablog==0.11.0rc2
 pydata-sphinx-theme==0.13.1
 Sphinx==6.1.3
-pygments-mathematica>=0.3.5
+pygments-mathematica==0.3.5
+myst-parser==1.0.0
