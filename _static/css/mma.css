@@ -2,7 +2,7 @@
  * Copyright (c) 2016 rsmenon
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
  */
-.highlight-wl .highlight .c,
+ html[data-theme="light"] .highlight-wl .highlight .c,
 .language-mathematica .c,
 .language-mma .c,
 .language-nb .c,
@@ -12,7 +12,7 @@
   color: rgb(153, 153, 153);
   font-style: italic;
 }
-.highlight-wl .highlight .nb,
+html[data-theme="light"] .highlight-wl .highlight .nb,
 .language-mathematica .nb,
 .language-mma .nb,
 .language-nb .nb,
@@ -21,7 +21,7 @@
 .language-wolfram-language .nb {
   color: #000;
 }
-.highlight-wl .highlight .nf,
+html[data-theme="light"] .highlight-wl .highlight .nf,
 .language-mathematica .nf,
 .language-mma .nf,
 .language-nb .nf,
@@ -31,7 +31,7 @@
   color: rgb(67, 137, 88);
   font-style: italic;
 }
-.highlight-wl .highlight .nt,
+html[data-theme="light"] .highlight-wl .highlight .nt,
 .language-mathematica .nt,
 .language-mma .nt,
 .language-nb .nt,
@@ -41,7 +41,7 @@
   color: rgb(67, 137, 88);
   font-style: italic;
 }
-.highlight-wl .highlight .nv,
+html[data-theme="light"] .highlight-wl .highlight .nv,
 .language-mathematica .nv,
 .language-mma .nv,
 .language-nb .nv,
@@ -50,7 +50,7 @@
 .language-wolfram-language .nv {
   color: rgb(0, 44, 195);
 }
-.highlight-wl .highlight .o,
+html[data-theme="light"] .highlight-wl .highlight .o,
 .language-mathematica .o,
 .language-mma .o,
 .language-nb .o,
@@ -59,7 +59,7 @@
 .language-wolfram-language .o {
   color: #000;
 }
-.highlight-wl .highlight .p,
+html[data-theme="light"] .highlight-wl .highlight .p,
 .language-mathematica .p,
 .language-mma .p,
 .language-nb .p,
@@ -68,7 +68,7 @@
 .language-wolfram-language .p {
   color: #000;
 }
-.highlight-wl .highlight .s,
+html[data-theme="light"] .highlight-wl .highlight .s,
 .language-mathematica .s,
 .language-mma .s,
 .language-nb .s,
@@ -77,7 +77,7 @@
 .language-wolfram-language .s {
   color: rgb(102, 102, 102);
 }
-.highlight-wl .highlight .vc,
+html[data-theme="light"] .highlight-wl .highlight .vc,
 .language-mathematica .vc,
 .language-mma .vc,
 .language-nb .vc,
@@ -86,7 +86,7 @@
 .language-wolfram-language .vc {
   color: rgb(67, 137, 88);
 }
-.highlight-wl .highlight .err,
+html[data-theme="light"]  .highlight-wl .highlight .err,
 .language-mathematica .err,
 .language-mma .err,
 .language-nb .err,
@@ -95,7 +95,7 @@
 .language-wolfram-language .err {
   color: rgb(102, 102, 102);
 }
-.highlight-wl .highlight *,
+html[data-theme="light"] .highlight-wl .highlight *,
 .language-mathematica *,
 .language-mma *,
 .language-nb *,

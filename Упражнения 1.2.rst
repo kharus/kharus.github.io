@@ -11,7 +11,7 @@
 Решение
 ~~~~~~~
 
-.. code-block:: mathematica
+.. code-block:: wl
 
     points = Flatten[Table[{x, y},
        {x, {1, -1}},
@@ -34,7 +34,7 @@
 Решение
 ~~~~~~~
 
-.. code-block:: mathematica
+.. code-block:: wl
 
     points = {{1, 5}, {5, 1}, {-1, 5}, {-5, 1}, {-1, -5}, {-5, -1}, {1, -5}, {5, -1}}
     labeledPoints = Labeled[#,
@@ -64,9 +64,6 @@
 
 .. image:: /_static/vmzeld/graph_1.2.4.svg
 
-
-
-
 =================  =======================  =======
  Точка              Расстояние                 Угол
 =================  =======================  =======
@@ -76,7 +73,7 @@
 :math:`(-4, 4)`      :math:`4 \sqrt{2}`        135°
 =================  =======================  =======
 
-.. code-block:: mathematica
+.. code-block:: wl
 
    points = {{1, 1}, {2, -2}, {-3, -3}, {-4, 4}}
    vectors = Table[{{0, 0}, p}, {p, points}]
@@ -134,15 +131,15 @@
  :math:`A_1(-2, -4)` и :math:`A_2 (-4, -2)`        :math:`2 \sqrt{2}` 
 ================================================  ========
 
-.. code-block:: mathematica
+.. code-block:: wl
 
    points = {{1, 1}, {1, -1}, {-1, -1}, {2, 4}, {4, 
       2}, {-2, -4}, {-4, -2}}
    vectors = {
-   {{1, 1}, {1, -1}},
-   {{1, 1}, {-1, -1}},
-   {{2, 4}, {4, 2}},
-   {{-2, -4}, {-4, -2}}}
+      {{1, 1}, {1, -1}},
+      {{1, 1}, {-1, -1}},
+      {{2, 4}, {4, 2}},
+      {{-2, -4}, {-4, -2}}}
    pTextPosition[p_] := p + 0.2*Sign[p]
    pText[{x_, y_}] := StringTemplate["(`1`,`2`)"][x, y]
    gPoints = Point /@ points
@@ -150,10 +147,10 @@
    pointLabels = Text[pText[#], pTextPosition[#]] & /@ points
    EuclideanDistance @@@ vectors
    Graphics[
-   Join[gPoints, pointLabels, gArrows],
-   Axes -> True,
-   GridLines -> Automatic,
-   AspectRatio -> 1]
+      Join[gPoints, pointLabels, gArrows],
+      Axes -> True,
+      GridLines -> Automatic,
+      AspectRatio -> 1]
 
 
 1.2.6.
@@ -168,7 +165,7 @@
 
 .. image:: /_static/vmzeld/graph_1.2.6.svg
 
-.. code-block:: mathematica
+.. code-block:: wl
 
    points = {{1, 0}, {1/2, -(Sqrt[3]/2)}, {-(1/2), -(Sqrt[3]/2)}, {-1, 
       0}, {-(1/2), Sqrt[3]/2}, {1/2, Sqrt[3]/2}}
@@ -177,13 +174,13 @@
    pTextPosition[p_] := p + 0.2*Sign[p]
 
    Graphics[{
-   {FaceForm[], EdgeForm[Black], Polygon[points]},
-   pointLabels,
-   gPoints,
-   Text["a", {0.6, 0.6}]},
-   Axes -> True,
-   AspectRatio -> 1,
-   Ticks -> None]
+      {FaceForm[], EdgeForm[Black], Polygon[points]},
+      pointLabels,
+      gPoints,
+      Text["a", {0.6, 0.6}]},
+      Axes -> True,
+      AspectRatio -> 1,
+      Ticks -> None]
 
 :math:`(\frac{a}{\sqrt{2}},\frac{a}{\sqrt{2}})`
 
@@ -200,7 +197,7 @@
 
 .. image:: /_static/vmzeld/graph_1.2.7.svg
 
-.. code-block:: mathematica
+.. code-block:: wl
 
    Graphics[{
    {FaceForm[], EdgeForm[Black], 
@@ -232,7 +229,7 @@
 
 .. image:: /_static/vmzeld/graph_1.2.8a.svg
 
-.. code-block:: mathematica
+.. code-block:: wl
 
    points = {{0, Sqrt[3]/2}, {1/2, 0}, {-(1/2), 0}}
    pTextPosition[p_] := p + 0.2*Sign[p]
@@ -260,10 +257,12 @@
 
 .. code-block:: wl
 
-   points = {{1/2, Sqrt[3]/2}, {1, 0}, {0, 0}}
-   gPoints = Point /@ points
-   pointLabels = Text[pText[a*#], pTextPosition[#]] & /@ points
-   lPoints = Table[Callout[p, pText[a*p]], {p, points}]
+   points = {{1/2, Sqrt[3]/2}, {1, 0}, {0, 0}};
+   gPoints = Point /@ points;
+   pText[{x_, y_}] := StringTemplate["(`1`,`2`)"][
+      ToString[x, TraditionalForm],
+      ToString[y, TraditionalForm]] 
+   lPoints = Table[Callout[p, pText[a*p]], {p, points}];
 
    ListPlot[
       lPoints,
