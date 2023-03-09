@@ -207,6 +207,7 @@ myst_enable_extensions = [
     "html_admonition",
     "html_image",
     "colon_fence",
+    "attrs_block",
 ]
 
 source_suffix = {
