@@ -208,6 +208,7 @@ myst_enable_extensions = [
     "html_image",
     "colon_fence",
     "attrs_block",
+    "deflist"
 ]
 
 source_suffix = {
