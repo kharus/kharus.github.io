@@ -131,3 +131,4 @@ dmypy.json
 #ablog work
 .doctrees/
 _website/
+/.quarto/
