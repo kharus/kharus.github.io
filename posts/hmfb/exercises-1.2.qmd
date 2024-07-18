@@ -9,7 +9,7 @@ date: 2023-02-12
 
 ### Решение
 
-~~~ wl
+```mathematica
 points = Flatten[Table[{x, y},
    {x, {1, -1}},
    {y, {1, -1}}], 1]
@@ -20,16 +20,16 @@ ListPlot[labeledPoints,
  GridLines -> Automatic,
  AspectRatio -> 1,
  PlotRange -> {{-2, 2}, {-2, 2}}]
-~~~
+```
 
-![](/_static/vmzeld/graph_1.2.1.svg)
+![](figures/graph_1.2.1.svg)
 
 ## 1.2.2.
 Изобразите точки $(1, 5); (5, 1); (-1, 5); (-5, 1); (-1,-5); (-5,-1); (1, -5); (5, -1)$.
 
 ### Решение
 
-~~~ wl
+```mathematica
 points = {{1, 5}, {5, 1}, {-1, 5}, {-5, 1}, {-1, -5}, {-5, -1}, {1, -5}, {5, -1}}
 labeledPoints = Labeled[#,
     TemplateApply[
@@ -39,9 +39,9 @@ ListPlot[labeledPoints,
  AspectRatio -> 1,
  PlotRange -> {{-6, 6}, {-6, 6}},
  PlotStyle -> {Black}]
-~~~
+```
 
-![](/_static/vmzeld/graph_1.2.2.svg)
+![](figures/graph_1.2.2.svg)
 
 ## 1.2.3.
 Изобразите точки $(0, 4); (0, -4); (4, 0); (-4, 0)$.
@@ -52,7 +52,7 @@ ListPlot[labeledPoints,
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.2.4.svg)
+![](figures/graph_1.2.4.svg)
 
 |Точка | Расстояние | Угол|
 |-- | -- | --|
@@ -61,7 +61,7 @@ ListPlot[labeledPoints,
 | $(-3, -3)$ | $3 \sqrt{2}$ | -135°|
 | $(-4, 4)$  | $4 \sqrt{2}$ | 135° |
 
-~~~ wl
+```mathematica
 points = {{1, 1}, {2, -2}, {-3, -3}, {-4, 4}}
 vectors = Table[{{0, 0}, p}, {p, points}]
 EuclideanDistance @@@ vectors
@@ -92,7 +92,7 @@ Graphics[{
   },
  Axes -> True,
  AspectRatio -> 1]
-~~~
+```
 
 ## 1.2.5.
 
@@ -104,7 +104,7 @@ Graphics[{
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.2.5.svg)
+![](figures/graph_1.2.5.svg)
 
 |Пара | Расстояние |
 |-- | -- |
@@ -113,7 +113,7 @@ Graphics[{
 | $A_1(2, 4)$ и $A_2 (4, 2)$     | $2 \sqrt{2}$ |
 | $A_1(-2, -4)$ и $A_2 (-4, -2)$ | $2 \sqrt{2}$ |
 
-~~~ wl
+```mathematica
 points = {{1, 1}, {1, -1}, {-1, -1}, {2, 4}, {4, 
    2}, {-2, -4}, {-4, -2}}
 vectors = {
@@ -132,7 +132,7 @@ Graphics[
  Axes -> True,
  GridLines -> Automatic,
  AspectRatio -> 1]
-~~~
+```
 
 ## 1.2.6.
 
@@ -142,9 +142,9 @@ Graphics[
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.2.6.svg)
+![](figures/graph_1.2.6.svg)
 
-~~~ wl
+```mathematica
 points = {{1, 0}, {1/2, -(Sqrt[3]/2)}, {-(1/2), -(Sqrt[3]/2)}, {-1, 
    0}, {-(1/2), Sqrt[3]/2}, {1/2, Sqrt[3]/2}}
 gPoints = Point /@ points
@@ -159,7 +159,7 @@ Graphics[{
  Axes -> True,
  AspectRatio -> 1,
  Ticks -> None]
-~~~
+```
 
 $$(\frac{a}{\sqrt{2}},\frac{a}{\sqrt{2}})$$
 
@@ -172,9 +172,9 @@ $x$, а центр лежит в начале координат.
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.2.7.svg)
+![](figures/graph_1.2.7.svg)
 
-~~~ wl
+```mathematica
 Graphics[{
   {FaceForm[], EdgeForm[Black], 
    Polygon[{{0, 1/Sqrt[2]}, {1/Sqrt[2], 
@@ -186,7 +186,7 @@ Graphics[{
  Ticks -> None]
 
 Solve[x^2 + x^2 == a^2, x]
-~~~
+```
 
 $$(a,0), (\frac{a}{2},-\frac{\sqrt{3} a}{2}), (-\frac{a}{2},-\frac{\sqrt{3} a}{2}), (-a,0),(-\frac{a}{2},\frac{\sqrt{3} a}{2}),(\frac{a}{2},\frac{\sqrt{3} a}{2})$$
 
@@ -202,9 +202,9 @@ $$(a,0), (\frac{a}{2},-\frac{\sqrt{3} a}{2}), (-\frac{a}{2},-\frac{\sqrt{3} a}{2
 
 #### Решение
 
-![](/_static/vmzeld/graph_1.2.8a.svg)
+![](figures/graph_1.2.8a.svg)
 
-~~~ wl
+```mathematica
 points = {{0, Sqrt[3]/2}, {1/2, 0}, {-(1/2), 0}}
 pTextPosition[p_] := p + 0.2*Sign[p]
 gPoints = Point /@ points
@@ -218,7 +218,7 @@ ListPlot[
  AspectRatio -> 1,
  Epilog -> {FaceForm[], EdgeForm[Blue], Polygon[points]}]
 
-~~~
+```
 
 ### б)
 Решите
@@ -226,9 +226,9 @@ ListPlot[
 принадлежит оси $x$, а вершина одного из углов
 совпадает с началом координат.
 
-![](/_static/vmzeld/graph_1.2.8b.svg)
+![](figures/graph_1.2.8b.svg)
 
-~~~ wl
+```mathematica
 points = {{1/2, Sqrt[3]/2}, {1, 0}, {0, 0}}
 gPoints = Point /@ points
 pointLabels = Text[pText[a*#], pTextPosition[#]] & /@ points
@@ -240,7 +240,7 @@ ListPlot[
  PlotRange -> {{-0.25, 1.25}, {-0.25, 1.25}},
  AspectRatio -> 1,
  Epilog -> {FaceForm[], EdgeForm[Blue], Polygon[points]}]
-~~~
+```
 
 ## 1.2.9.
 

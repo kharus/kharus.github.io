@@ -12,9 +12,9 @@ date: 2023-03-02
 * $y = x^4 + x^2$
 
 ### Решение
-![](/_static/vmzeld/graph_1.5.1.svg)
+![](figures/graph_1.5.1.svg)
 
-~~~ wl
+```mathematica
 Plot[{
    x^4 + 1,
    -x^4 + 1,
@@ -26,7 +26,7 @@ Plot[{
   AxesStyle -> Thickness[0.003],
   PlotRange -> {{-2, 3}, {-4, 8}},
   PlotLegends -> "Expressions"]
-~~~
+```
 
 ## 1.5.2.
 Изобразите графики функций:
@@ -35,9 +35,9 @@ Plot[{
 * $$y=-\frac{1}{x^2} + 4$$
 
 ### Решение
-![](/_static/vmzeld/graph_1.5.2.svg)
+![](figures/graph_1.5.2.svg)
 
-~~~ wl
+```mathematica
 p5d2 = Plot[{
    1/x^3 + 1,
    -1/x^2 + 4},
@@ -48,7 +48,7 @@ p5d2 = Plot[{
   AxesStyle -> Thickness[0.003],
   PlotRange -> {{-5, 5}, {-5, 5}},
   PlotLegends -> "Expressions"]
-~~~
+```
 
 ## 1.5.3.
 Какой вид имеют графики функций:
@@ -61,4 +61,4 @@ p5d2 = Plot[{
 при очень больших (натуральных) $n$?
 
 ### Решение
-![](/_static/vmzeld/graph_1.5.3.svg)
+![](figures/graph_1.5.3.svg)
