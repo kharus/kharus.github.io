@@ -12,9 +12,9 @@ date: 2023-02-23
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.4.1.svg)
+![](figures/graph_1.4.1.svg)
 
-~~~ wl
+```mathematica
 Plot[{
     3/x,
     -1/(2 x),
@@ -24,7 +24,7 @@ Plot[{
     GridLines -> Automatic,
     PlotRange -> {{-5, 5}, {-5, 5}},
     PlotLegends -> "Expressions"]
-~~~
+```
 
 ## 1.4.2.
 Изобразите графики функций
@@ -34,9 +34,9 @@ Plot[{
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.4.2.svg)
+![](figures/graph_1.4.2.svg)
 
-~~~ wl
+```mathematica
 Plot[
     {
         x^2 - 2 x + 2,
@@ -46,7 +46,7 @@ Plot[
     GridLines -> Automatic,
     PlotRange -> {{-5, 5}, {0, 10}},
     PlotLegends -> "Expressions"]
-~~~
+```
 
 ## 1.4.3.
 Покажите, что гипербола $y = k/x$,
@@ -68,9 +68,9 @@ Plot[
 ### Решение
 
 #### 1.
-![](/_static/vmzeld/graph_1.4.3a.svg)
+![](figures/graph_1.4.3a.svg)
 
-~~~ wl
+```mathematica
 Show[
     Plot[{
             1/x,
@@ -87,7 +87,7 @@ Show[
         Callout[{1/Sqrt[2],Sqrt[2]},"(1/Sqrt[2],Sqrt[2])"],
         Callout[{Sqrt[3]/Sqrt[2],Sqrt[6]},"(Sqrt[3]/Sqrt[2],Sqrt[6])"]},
         PlotStyle->{Black,Large}]]
-~~~
+```
 
 Прямая $y = ax$ пересекает гиперболу $y = 1/x$ в точке
 
@@ -116,7 +116,7 @@ OM' &= \sqrt{k} \cdot OM\\
 $$
 
 #### 2
-![](/_static/vmzeld/graph_1.4.3b.svg)
+![](figures/graph_1.4.3b.svg)
 
 Прямая $y = a$ пересекает гиперболу $y = 1/x$ в точке
 
@@ -146,7 +146,7 @@ $$
 
 ### Решение
 
-![](/_static/vmzeld/graph_1.4.4.svg)
+![](figures/graph_1.4.4.svg)
 
 Возьмём два значения
 $x_1$ и $x_2$ на оси $x$ им отвечают точки
