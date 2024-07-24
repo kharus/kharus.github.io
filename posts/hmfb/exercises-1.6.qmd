@@ -106,6 +106,7 @@ ParametricPlot[
   }, {t, -10, 10},
  AspectRatio -> 1,
  GridLines -> Automatic,
+ PlotStyle -> {Dashed, Automatic, Automatic},
  PlotRange -> {{-10, 10}, {-10, 10}}]
 ```
 #### 2. $y=x^3-x$
@@ -121,6 +122,7 @@ ParametricPlot[
   }, {t, -10, 10},
  AspectRatio -> 1,
  GridLines -> Automatic,
+ PlotStyle -> {Dashed, Automatic, Automatic},
  PlotRange -> {{-10, 10}, {-10, 10}}]
 ```
 
@@ -129,7 +131,8 @@ ParametricPlot[
 ![](figures/graph_1.6.2.c.svg)
 
 ```mathematica
-Plot[{
+ Plot[{
+  x,
   x^-2,
   x^(-1/2)},
  {x, 0, 5},
@@ -137,6 +140,7 @@ Plot[{
  GridLines -> Automatic,
  Axes -> True,
  AxesStyle -> Thickness[0.003],
+ PlotStyle -> {Dashed, Automatic, Automatic},
  PlotRange -> {{0, 5}, {0, 5}},
  PlotLegends -> "Expressions"]
 ```
@@ -147,11 +151,13 @@ Plot[{
 
 ```mathematica
 Plot[{
+  x,
   x^(-3),
   1/CubeRoot[x]},
  {x, -5, 5},
  AspectRatio -> 1,
  GridLines -> Automatic,
+ PlotStyle -> {Dashed, Automatic, Automatic},
  Axes -> True,
  AxesStyle -> Thickness[0.003],
  PlotRange -> {{-5, 5}, {-5, 5}},
