@@ -93,6 +93,72 @@ $$
 функций, позволяющие прийти к однозначной
 обратной функции.
 
+#### 1. $y=x^3+x$
+
+![](figures/graph_1.6.2.a.svg)
+
+```mathematica
+ParametricPlot[
+ {
+  {t, t},
+  {t, t^3 + t},
+  {t^3 + t, t}
+  }, {t, -10, 10},
+ AspectRatio -> 1,
+ GridLines -> Automatic,
+ PlotRange -> {{-10, 10}, {-10, 10}}]
+```
+#### 2. $y=x^3-x$
+
+![](figures/graph_1.6.2.b.svg)
+
+```mathematica
+ParametricPlot[
+ {
+  {t, t},
+  {t, t^3 - t},
+  {t^3 - t, t}
+  }, {t, -10, 10},
+ AspectRatio -> 1,
+ GridLines -> Automatic,
+ PlotRange -> {{-10, 10}, {-10, 10}}]
+```
+
+#### 3. $y=x^{-2}=\frac{1}{x^2}$
+
+![](figures/graph_1.6.2.c.svg)
+
+```mathematica
+Plot[{
+  x^-2,
+  x^(-1/2)},
+ {x, 0, 5},
+ AspectRatio -> 1,
+ GridLines -> Automatic,
+ Axes -> True,
+ AxesStyle -> Thickness[0.003],
+ PlotRange -> {{0, 5}, {0, 5}},
+ PlotLegends -> "Expressions"]
+```
+
+#### 4. $y=x^{-3}=\frac{1}{x^3}$
+
+![](figures/graph_1.6.2.d.svg)
+
+```mathematica
+Plot[{
+  x^(-3),
+  1/CubeRoot[x]},
+ {x, -5, 5},
+ AspectRatio -> 1,
+ GridLines -> Automatic,
+ Axes -> True,
+ AxesStyle -> Thickness[0.003],
+ PlotRange -> {{-5, 5}, {-5, 5}},
+ PlotLegends -> "Expressions"]
+```
+
+
 ## 1.6.3.
 
 Найдите функцию, обратную:
