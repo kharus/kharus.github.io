@@ -176,6 +176,45 @@ Plot[{
 3. функции
     $$ y=\frac{ax+b}{cx+d} $$
 
+### Решение
+
+####  $y=ax+b$
+
+$$
+\begin{flalign}
+y &= ax+b\\
+y - b&= ax\\
+\frac{y - b}{a}&= x\\
+\end{flalign}
+$$
+
+```mathematica
+Reduce[x == a*y + b, {x, y}]
+y == (-b + x)/a
+```
+
+####  $y=ax^2+bx+c$
+
+$$
+\begin{flalign}
+y &= ax^2+bx+c\\
+\frac{y}{a} &= x^2+\frac{b}{a}x+\frac{c}{a}\\
+\frac{y}{a} &= x^2+\frac{b}{a}x+\frac{1}{4}\frac{b^2}{a^2}-\frac{1}{4}\frac{b^2}{a^2}+\frac{c}{a}\\
+\frac{y}{a} &= (x+\frac{1}{2}\frac{b}{a})^2-\frac{1}{4}\frac{b^2}{a^2}+\frac{c}{a}\\
+\frac{y}{a} + \frac{b^2}{4a^2} - \frac{c}{a} &= (x+\frac{b}{2a})^2\\
+\frac{4ya}{4a^2} + \frac{b^2}{4a^2} - \frac{4ca}{4a^2} &= (x+\frac{b}{2a})^2\\
+\sqrt{\frac{4ya}{4a^2} + \frac{b^2}{4a^2} - \frac{4ca}{4a^2}} &= x+\frac{b}{2a}\\
+\frac{\sqrt{4ya + b^2 - 4ca}}{2a} - \frac{b}{2a} &= x\\
+\frac{\sqrt{4ya + b^2 - 4ca} - b}{2a} &= x\\
+\end{flalign}
+$$
+
+```mathematica
+Reduce[x == a*y^2 + b*y + c, {x, y}]
+y == (-b + Sqrt[b^2 - 4*a*c + 4*a*x])/(2*a)
+```
+$$y=\frac{\sqrt{-4 a c+4 a x+b^2}-b}{2 a}$$
+
 ## 1.6.4.
 
 Пусть $f(x)$ и $g(x)$ —
