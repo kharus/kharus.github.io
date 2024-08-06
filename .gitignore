@@ -132,3 +132,4 @@ dmypy.json
 .doctrees/
 _website/
 /.quarto/
+_site
