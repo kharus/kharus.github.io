@@ -215,6 +215,25 @@ y == (-b + Sqrt[b^2 - 4*a*c + 4*a*x])/(2*a)
 ```
 $$y=\frac{\sqrt{-4 a c+4 a x+b^2}-b}{2 a}$$
 
+#### $y=\frac{ax+b}{cx+d}$
+
+$$
+\begin{flalign}
+y &= \frac{ax+b}{cx+d}\\
+y(cx+d) &= ax+b\\
+ycx-ax &= b - yd\\
+x(yc-a) &= b - yd\\
+x &= \frac{b - dy}{cy-a}\\
+\end{flalign}
+$$
+
+```mathematica
+Reduce[x == (a*y + b)/(c*y + d), {x, y}]
+y == (-b + d*x)/(a - c*x)
+```
+
+$$y=\frac{d x-b}{a-c x}$$
+
 ## 1.6.4.
 
 Пусть $f(x)$ и $g(x)$ —
